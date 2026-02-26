@@ -1,0 +1,9 @@
+README.md
+pyproject.toml
+src/aspectmind/__init__.py
+src/aspectmind.egg-info/PKG-INFO
+src/aspectmind.egg-info/SOURCES.txt
+src/aspectmind.egg-info/dependency_links.txt
+src/aspectmind.egg-info/top_level.txt
+src/aspectmind/data/loader.py
+src/aspectmind/train/train_baseline.py

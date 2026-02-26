@@ -1,0 +1,37 @@
+# Dataset A: UIT-ViSD4SA (Smartphone Reviews)
+
+dataset_name: uit_visd4sa
+
+text_field: text
+label_field: labels
+
+# Final 6 aspects used in AspectMind
+target_aspects:
+  - battery
+  - camera
+  - performance
+  - design
+  - price
+  - service
+
+# Mapping from original dataset aspects → target aspects
+aspect_mapping:
+  BATTERY: battery
+  CAMERA: camera
+  PERFORMANCE: performance
+  DESIGN: design
+  PRICE: price
+  SER&ACC: service
+
+# Original aspects that will be ignored
+ignored_aspects:
+  - GENERAL
+  - FEATURES
+  - SCREEN
+  - STORAGE
+
+# Sentiment mapping
+sentiment_mapping:
+  POSITIVE: pos
+  NEGATIVE: neg
+  NEUTRAL: neu

@@ -1,0 +1,46 @@
+############################
+# Virtual environment
+venv/
+.venv/
+env/
+
+############################
+# Data
+data/
+
+############################
+# Training outputs
+runs/
+outputs/
+artifacts/
+
+############################
+# Python cache
+__pycache__/
+*.py[cod]
+*.so
+
+############################
+# Logs
+logs/
+*.log
+
+############################
+# OS / IDE
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+############################
+# Large model weights
+*.pt
+*.pth
+*.bin
+*.ckpt
+*.safetensors
+
+############################
+# Temp files
+tree.txt
+structure.txt
