@@ -44,3 +44,4 @@ Thumbs.db
 # Temp files
 tree.txt
 structure.txt
+*.egg-info/
