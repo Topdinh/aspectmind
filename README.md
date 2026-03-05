@@ -1,10 +1,10 @@
 # **AspectMind: Vietnamese Aspect‑Based Sentiment Analysis**
 
-Description
+## Description
 AspectMind is a project that builds an aspect‑based sentiment analysis (ABSA) system for Vietnamese text. ABSA is a fine‑grained opinion‑mining technique that determines the sentiment of a sentence with respect to a specific aspect; unlike traditional sentiment analysis that treats a whole document as a single unit, ABSA can reveal that a review is overall positive yet expresses a negative feeling about a particular feature.
 The project implements ABSA on the UIT‑ViSFD dataset, which consists of 11 122 manually annotated Vietnamese smartphone comments. The dataset was collected from a large Vietnamese e‑commerce website and annotated with ten aspects and three sentiment polarities (positive, negative and neutral). It is split into 7 786 training comments, 1 112 development comments and 2 224 test comments. The code uses PhoBERT, the first BERT‑based language model pre‑trained specifically for Vietnamese; the PhoBERT‑base and PhoBERT‑large variants are large monolingual models that outperform multilingual models on multiple Vietnamese NLP tasks.
 
-Features
+## Features
 + PhoBERT‑based predictors – Implements single‑aspect and multi‑aspect classifiers based on PhoBERT. Using a monolingual pre‑trained model improves accuracy.
 + Modular architecture – Components are clearly organised under src/aspectmind, separating data processing, model training, inference and threshold tuning.
 + Training & evaluation scripts – The scripts/ directory includes tools for training, evaluation, threshold tuning and probability calibration. Scripts support plotting F1‑score against thresholds and evaluating models in multiple modes.
@@ -12,7 +12,7 @@ Features
 + Comprehensive tests – The tests/ directory contains unit tests to ensure processing and inference pipelines work correctly.
 + Reproducible environment – requirements.txt, pyproject.toml and Makefile facilitate easy setup and ensure consistent environments across systems.
 
-Project structure
+## Project structure
 ```
 aspectmind/
 ├── src/aspectmind/          # Core library: data handling, models and inference
@@ -27,7 +27,7 @@ aspectmind/
 └── README.md                # This documentation (Vietnamese)
 ```
 
-Installation
+## Installation
 1. Create a Python environment: Use Python ≥ 3.10. Creating a virtual environment is recommended:
 ```
 python -m venv .venv
@@ -56,7 +56,7 @@ streamlit run demo/app_streamlit.py
 ```
 Then open a browser at http://localhost:8501 and enter Vietnamese text to see the aspects and sentiments predicted by the model.
 
-Usage example
+## Usage example
 Suppose you want to analyse the review:
 "Điện thoại chạy mượt, pin tốt nhưng camera hơi kém." – “The phone runs smoothly, the battery is good but the camera is a bit weak.”
 After running the predictor, the system might return a table like this:
@@ -66,19 +66,20 @@ Battery	    |  Positive
 Camera	    |  Negative
 The above table is illustrative only; actual results depend on the model and threshold you choose.
 
-Results & evaluation
+## Results & evaluation
 By fine‑tuning PhoBERT on the UIT‑ViSFD dataset, the model achieves high F1‑scores on both aspect detection and sentiment classification tasks. The script scripts/eval_test_4modes_phobert_single.py produces detailed reports and plots F1‑score against threshold. Owing to PhoBERT – a large monolingual language model dedicated to Vietnamese – the project’s model surpasses multilingual baselines and performs well on ABSA.
-Contributing
+
+## Contributing
 Contributions are welcome! If you find a bug or would like to add a feature:
 1. Fork the repository and create a new branch.
 2. Commit your changes with a clear message.
 3. Open a Pull Request describing your changes and why they are needed.
 4. Ensure all tests (pytest) pass before submitting.
 
-License
+## License
 This project is licensed under the MIT License. See the LICENSE file for details.
 
-References
+## References
 + UIT‑ViSFD dataset: A smartphone feedback dataset containing 11 122 comments annotated with 10 aspects and 3 sentiment polarities, split into train/dev/test sets of 7 786 / 1 112 / 2 224 respectively.\
 + PhoBERT: A large monolingual language model dedicated to Vietnamese; PhoBERT‑base and PhoBERT‑large are the first models of their kind and outperform multilingual models on various Vietnamese NLP tasks.
 + Aspect‑Based Sentiment Analysis: A technique that determines sentiment with respect to individual aspects, addressing limitations of traditional sentiment analysis by pinpointing emotions about specific components within text.
