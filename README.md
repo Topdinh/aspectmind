@@ -37,9 +37,9 @@ source .venv/bin/activate
 ```
 pip install -r requirements.txt
 ```
-3. Download the data: Obtain the UIT‑ViSFD dataset from its project page. This dataset comprises 11 122 smartphone feedback comments annotated with 10 aspects and 3 sentiment polarities. The splits are 7 786 / 1 112 / 2 224 for train/dev/test. Place the raw files (CSV/JSON) into a data/raw/ directory. Modules in src/aspectmind/data will load and convert the data into the required format.
+3. Download the data: Obtain the UIT‑ViSFD dataset from its project page. This dataset comprises 11 122 smartphone feedback comments annotated with 10 aspects and 3 sentiment polarities. The splits are 7 786 / 1 112 / 2 224 for train/dev/test. Place the raw files (CSV/JSON) into a ```data/raw/``` directory. Modules in ```src/aspectmind/data``` will load and convert the data into the required format.
 
-4. Train the model: Use the scripts/evaluate_models.py script to train and evaluate. Example:
+4. Train the model: Use the ```scripts/evaluate_models.py``` script to train and evaluate. Example:
 ```
 python scripts/evaluate_models.py \
     --data_dir data/raw \
@@ -48,13 +48,13 @@ python scripts/evaluate_models.py \
 ```
 Parameters such as --batch_size and --learning_rate can be adjusted as needed.
 
-5. Tune thresholds & calibration: Use scripts/tune_threshold_phobert_single.py and scripts/plot_f1_vs_threshold.py to find the optimal decision thresholds based on F1‑score. The scripts/plot_calibration_curve.py helps plot probability calibration curves.
+5. Tune thresholds & calibration: Use ```scripts/tune_threshold_phobert_single.py``` and ```scripts/plot_f1_vs_threshold.py``` to find the optimal decision thresholds based on F1‑score. The ```scripts/plot_calibration_curve.py``` helps plot probability calibration curves.
 
 6. Run the Streamlit demo:
 ```
 streamlit run demo/app_streamlit.py
 ```
-Then open a browser at http://localhost:8501 and enter Vietnamese text to see the aspects and sentiments predicted by the model.
+Then open a browser at ```http://localhost:8501``` and enter Vietnamese text to see the aspects and sentiments predicted by the model.
 
 ## Usage example
 Suppose you want to analyse the review:
@@ -68,7 +68,7 @@ After running the predictor, the system might return a table like this:
 The above table is illustrative only; actual results depend on the model and threshold you choose.
 
 ## Results & evaluation
-By fine‑tuning PhoBERT on the UIT‑ViSFD dataset, the model achieves high F1‑scores on both aspect detection and sentiment classification tasks. The script scripts/eval_test_4modes_phobert_single.py produces detailed reports and plots F1‑score against threshold. Owing to PhoBERT – a large monolingual language model dedicated to Vietnamese – the project’s model surpasses multilingual baselines and performs well on ABSA.
+By fine‑tuning PhoBERT on the UIT‑ViSFD dataset, the model achieves high F1‑scores on both aspect detection and sentiment classification tasks. The script ```scripts/eval_test_4modes_phobert_single.py``` produces detailed reports and plots F1‑score against threshold. Owing to PhoBERT – a large monolingual language model dedicated to Vietnamese – the project’s model surpasses multilingual baselines and performs well on ABSA.
 
 ## Contributing
 Contributions are welcome! If you find a bug or would like to add a feature:
