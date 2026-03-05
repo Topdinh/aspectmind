@@ -60,10 +60,10 @@ Then open a browser at http://localhost:8501 and enter Vietnamese text to see th
 Suppose you want to analyse the review:
 "Điện thoại chạy mượt, pin tốt nhưng camera hơi kém." – “The phone runs smoothly, the battery is good but the camera is a bit weak.”
 After running the predictor, the system might return a table like this:
-Aspect	    |  Sentiment
-Performance	|  Positive
-Battery	    |  Positive
-Camera	    |  Negative
+| Aspect | Sentiment |
+|------|------|
+| Battery | Positive |
+| Camera | Negative |
 The above table is illustrative only; actual results depend on the model and threshold you choose.
 
 ## Results & evaluation
