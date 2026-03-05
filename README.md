@@ -6,11 +6,11 @@ The project implements ABSA on the UIT‑ViSFD dataset, which consists of 11 122
 
 ## Features
 + PhoBERT‑based predictors – Implements single‑aspect and multi‑aspect classifiers based on PhoBERT. Using a monolingual pre‑trained model improves accuracy.
-+ Modular architecture – Components are clearly organised under src/aspectmind, separating data processing, model training, inference and threshold tuning.
-+ Training & evaluation scripts – The scripts/ directory includes tools for training, evaluation, threshold tuning and probability calibration. Scripts support plotting F1‑score against thresholds and evaluating models in multiple modes.
-+ Streamlit demo application – demo/app_streamlit.py provides a lightweight web interface that lets you enter Vietnamese text and see predicted aspects and sentiments in real time.
-+ Comprehensive tests – The tests/ directory contains unit tests to ensure processing and inference pipelines work correctly.
-+ Reproducible environment – requirements.txt, pyproject.toml and Makefile facilitate easy setup and ensure consistent environments across systems.
++ Modular architecture – Components are clearly organised under ```src/aspectmind```, separating data processing, model training, inference and threshold tuning.
++ Training & evaluation scripts – The ```scripts/``` directory includes tools for training, evaluation, threshold tuning and probability calibration. Scripts support plotting F1‑score against thresholds and evaluating models in multiple modes.
++ Streamlit demo application – ```demo/app_streamlit.py``` provides a lightweight web interface that lets you enter Vietnamese text and see predicted aspects and sentiments in real time.
++ Comprehensive tests – The ```tests/``` directory contains unit tests to ensure processing and inference pipelines work correctly.
++ Reproducible environment – ```requirements.txt```, ```pyproject.toml``` and ```Makefile``` facilitate easy setup and ensure consistent environments across systems.
 
 ## Project structure
 ```
