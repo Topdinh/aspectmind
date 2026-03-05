@@ -1,4 +1,4 @@
-#**AspectMind: Vietnamese Aspect‑Based Sentiment Analysis**
+# **AspectMind: Vietnamese Aspect‑Based Sentiment Analysis**
 
 Description
 AspectMind is a project that builds an aspect‑based sentiment analysis (ABSA) system for Vietnamese text. ABSA is a fine‑grained opinion‑mining technique that determines the sentiment of a sentence with respect to a specific aspect; unlike traditional sentiment analysis that treats a whole document as a single unit, ABSA can reveal that a review is overall positive yet expresses a negative feeling about a particular feature.
