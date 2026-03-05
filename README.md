@@ -13,7 +13,7 @@ Features
 + Reproducible environment – requirements.txt, pyproject.toml and Makefile facilitate easy setup and ensure consistent environments across systems.
 
 Project structure
-'''
+```
 aspectmind/
 ├── src/aspectmind/          # Core library: data handling, models and inference
 │   ├── data/                # Data loading and preprocessing modules
@@ -25,35 +25,35 @@ aspectmind/
 ├── pyproject.toml           # Python package & dependency declaration
 ├── requirements.txt         # Python dependencies
 └── README.md                # This documentation (Vietnamese)
-'''
+```
 
 Installation
 1. Create a Python environment: Use Python ≥ 3.10. Creating a virtual environment is recommended:
-'''
+```
 python -m venv .venv
 source .venv/bin/activate
-'''
+```
 2. Install dependencies:
-'''
+```
 pip install -r requirements.txt
-'''
+```
 3. Download the data: Obtain the UIT‑ViSFD dataset from its project page. This dataset comprises 11 122 smartphone feedback comments annotated with 10 aspects and 3 sentiment polarities. The splits are 7 786 / 1 112 / 2 224 for train/dev/test. Place the raw files (CSV/JSON) into a data/raw/ directory. Modules in src/aspectmind/data will load and convert the data into the required format.
 
 4. Train the model: Use the scripts/evaluate_models.py script to train and evaluate. Example:
-'''
+```
 python scripts/evaluate_models.py \
     --data_dir data/raw \
     --model_type phobert \
     --output_dir outputs/phobert_single
-'''
+```
 Parameters such as --batch_size and --learning_rate can be adjusted as needed.
 
 5. Tune thresholds & calibration: Use scripts/tune_threshold_phobert_single.py and scripts/plot_f1_vs_threshold.py to find the optimal decision thresholds based on F1‑score. The scripts/plot_calibration_curve.py helps plot probability calibration curves.
 
 6. Run the Streamlit demo:
-'''
+```
 streamlit run demo/app_streamlit.py
-'''
+```
 Then open a browser at http://localhost:8501 and enter Vietnamese text to see the aspects and sentiments predicted by the model.
 
 Usage example
