@@ -64,6 +64,7 @@ After running the predictor, the system might return a table like this:
 |------|------|
 | Battery | Positive |
 | Camera | Negative |
+
 The above table is illustrative only; actual results depend on the model and threshold you choose.
 
 ## Results & evaluation
